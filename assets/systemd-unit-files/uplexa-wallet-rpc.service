@@ -1,0 +1,14 @@
+[Unit]
+Description=uPlexa Wallet RPC
+After=network.target uplexad.service
+
+[Service]
+User=uplexaservices
+Group=uplexaservices
+WorkingDirectory=/opt/uplexa-wallets
+Type=simple
+ExecStart=/opt/uplexa-bin/uplexa-wallet-rpc --wallet-file /opt/uplexa-wallets/woocommerce --rpc-bind-port 21060 --password-file /opt/uplexa-wallets/woocommerce.password --disable-rpc-login --log-file /var/log/uplexa-wallet.log
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

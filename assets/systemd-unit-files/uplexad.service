@@ -1,0 +1,14 @@
+[Unit]
+Description=uPlexa Full Node
+After=network.target
+
+[Service]
+User=uplexaservices
+Group=uplexaservices
+WorkingDirectory=/opt/uplexa-data-dir
+Type=simple
+LimitNOFILE=65535
+ExecStart=/usr/bin/uplexad --log-file /var/log/uplexad.log --data-dir /opt/uplexa-data-dir --non-interactive
+Restart=always
+[Install]
+WantedBy=multi-user.target
