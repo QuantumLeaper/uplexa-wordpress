@@ -81,12 +81,3 @@ This will display the price of uPlexa in the selected currency. If no currency i
 [uplexa-price currency="EUR"]
 [uplexa-price currency="GBP"]
 ```
-Will display:
-```
-1 UPX = 123.68000 USD
-1 UPX = 0.01827000 BTC
-1 UPX = 123.68000 USD
-1 UPX = 168.43000 CAD
-1 UPX = 105.54000 EUR
-1 UPX = 94.84000 GBP
-```
